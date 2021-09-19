@@ -1,6 +1,6 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
-
+/*
 const parse = require("pg-connection-string").parse;
 const { Pool } = require("pg");
 const prompt = require("prompt");
@@ -102,8 +102,25 @@ const Search = ({ setInputText, query, setQuery }) => {
             <input onChange={inputTextHandler} type="text" className="search-bar"/>
             <div className="menu">
                 <select name="categories" className="categories">
-                    <option value="all">All</option>
-                    <option value="continue this">Continue this</option>
+                    <option value="Southeast Asian Restaurant">Southeast Asian Restaurant</option>
+                    <option value="East Asian Restaurant">East Asian Restaurant</option>
+                    <option value="Middle Eastern Restaurant">Middle Eastern Restaurant</option>
+                    <option value="Italian Restaurant">Italian Restaurant</option>
+                    <option value="Mexican Restaurant">Mexican Restaurant</option>
+                    <option value="Indian Restaurant">Indian Restaurant</option>
+                    <option value="Resteraunt">Restaurant</option>
+                    <option value="Cafe">Cafe</option>
+                    <option value="Supermarket">Supermarket</option>
+                    <option value="Shoes">Footwear</option>
+                    <option value="Convenience Store">Convenience Store</option>
+                    <option value="Bakery">Bakery</option>
+                    <option value="Vetrinarian Clinic">Vetrinarian Clinic</option>
+                    <option value="Laundry">Laundry</option>
+                    <option value="Appliance Stores">Appliance Store</option>
+                    <option value="Hair Salon">Hair Salon</option>
+                    <option value="Nail Salon">Nail Salon</option>
+                    <option value="Spa">Spa</option>
+
                 </select>
             </div>
             <button onClick={submitHandler} className="search-button" type="submit">
