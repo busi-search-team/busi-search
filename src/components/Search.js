@@ -88,7 +88,7 @@ async function retryTxn(n, max, client, operation, callback) {
   })().catch((err) => console.log(err.stack));
 
 /* Text box, drop down menu and search button */
-const Search = ({ setInputText, query, setQuery }) => {
+const Search = ({ setInputText, setCategory }) => {
     const history = useHistory();
     const inputTextHandler = (e) => {
         setInputText(e.target.value);
@@ -97,11 +97,14 @@ const Search = ({ setInputText, query, setQuery }) => {
         //e.preventDefault();
         history.push("/Nextpage");
     }
+    const categoryHandler = (e) => {
+      setCategory(e.target.value);
+    }
     return(
         <form>
             <input onChange={inputTextHandler} type="text" className="search-bar"/>
             <div className="menu">
-                <select name="categories" className="categories">
+                <select onChange={categoryHandler} name="categories" className="categories">
                     <option value="Southeast Asian Restaurant">Southeast Asian Restaurant</option>
                     <option value="East Asian Restaurant">East Asian Restaurant</option>
                     <option value="Middle Eastern Restaurant">Middle Eastern Restaurant</option>
